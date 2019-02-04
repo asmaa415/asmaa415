@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+		.box { background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+	 margin: 100px auto;
+	 padding: 10px;
+	 width:700px;
+			align-content: center;
+			float: inherit;
+	
+     }
+		.myform{align:center;}
+		nav {
+    font-weight: bold;
+	margin: 0px auto;
+	padding: 5px;
+			padding-left: 120px;
+	width: 420px;
+	}
+	
+a {text-decoration: none;
+  }
+  
+a:hover {color: #FFFFFF;
+         background-color: darkblue;
+        }
+	
+p {text-align: center; font-size:14px;
+	color: firebrick;
+  }	
+	</style>
+	<script>
+	
+		function process(){
+			var number1,number2,number3, n1,n2,n3 , sum , avrg, product;
+			
+			number1=document.getElementById("num1").value;
+			number2= document.getElementById("num2").value;
+			number3=document.getElementById("num3").value;
+			n1 = parseInt(number1);
+			n2 = parseInt(number2);
+			n3 = parseInt(number3);
+			sum = n1 + n2 + n3;
+			avrg=sum / 3;
+			product= n1*n2*n3;
+			
+			document.getElementById("result").value = (  
+"\nThe sum of the integers was" + " " + sum  +
+"\nThe avarge of the integers was" + " " + avrg+
+"\nThe product of the integers was " +" "+ product)+
+"\nHere is the biggest number " +" "+ Math.max(n1,n2,n3) + "\nHere is the smallest number "+" " + Math.min(n1,n2,n3);
+		
+        
+		}
+	</script>
+</head>
+<body background="pcc.jpg">
+	<div class ="box">
+		<nav>
+  <a href="cnit133-hw2.html">Home</a> |
+  <a href="part1.html">Part 1</a> |
+  <a href="#">Part 2</a> |
+  <a href="part3.html">Part 3</a> | 
+  <a href="part4.html">Part 4</a> 
+ 
+</nav>
+	<h3 align="center"> PART 2 </h3>
+	<p align="center">using HTML form and JS functios </p>
+		<div align="center">
+<form id="myform" name="myform">
+		<table>
+		  <h5 align="center">Enter 3 numbers </h5>
+	<tr>  
+	<td>Fisrt Number:</td>
+		<td> <input type="text" id ="num1" size="10px"></td>
+			</tr>
+			<tr>  
+	<td>Second Number:</td>
+		<td> <input type="text" id ="num2" size="10px"></td>
+			</tr>
+			<tr>  
+	<td>Third Number:</td>
+		<td> <input type="text" id ="num3" size="10px"></td>
+			</tr>
+	</table>
+<p>the result of adding ,multipy and avarge of
+	the 3 numbers will appear in this textarea when you click submet buttuon </p>
+Results: <textarea rows="8" cols="40" id="result" readonly></textarea><br> 
+<br>
+<input type="button" onclick="process()" value="SUBMIT">
+<input type="reset" value="RESET">
+			
+		</form>
+	</div>
+		<br>
+		<p>
+		<script type="text/javascript">
+var LastUpdated = document.lastModified;
+document.writeln ("Last modified: " + LastUpdated);
+</script>
+</p>
+
+<p><a href="https://validator.w3.org/check?uri=referer">
+<img style="border:0;width:100px;height:59px" src="html5logo.jpg"
+alt="HTML5"></a>
+
+<a href="https://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+		 alt="Valid CSS!"></a></p>
+		</div>
+</body>
+</html>
+

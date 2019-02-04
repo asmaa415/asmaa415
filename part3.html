@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+		body{background-image: url("p3.jpg");}
+		.box { background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+	 margin: 100px auto;
+	 padding: 10px;
+	 width:700px;
+			align-content: center;
+			float: inherit;
+	
+     }
+		.myform{align:center;}
+		nav {
+    font-weight: bold;
+	margin: 0px auto;
+	padding-left: 100px;
+			padding-top: 5px;
+	width: 400px;
+	}
+	
+a {text-decoration: none;
+  }
+  
+a:hover {color: #FFFFFF;
+         background-color: darkblue;
+        }
+	
+p {text-align: center; font-size:14px;
+	color:dodgerblue;
+  }	
+		
+	</style>
+
+	<script>
+		function process()
+
+		{
+
+			
+
+			var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5,
+				zeroCount = 0,
+				underZeroCount = 0,
+				overZeroCount = 0;
+
+			
+
+			number1 = document.getElementById("num1").value;
+
+			number2 = document.getElementById("num2").value;
+
+			number3 = document.getElementById("num3").value;
+
+			number4 = document.getElementById("num4").value;
+
+			number5 = document.getElementById("num5").value;
+
+			
+
+			n1 = parseInt(number1);
+			n2 = parseInt(number2);
+			n3 = parseInt(number3);
+			n4 = parseInt(number4);
+			n5 = parseInt(number5);
+
+
+			
+
+			if (n1 < 0)
+				underZeroCount = underZeroCount + 1;
+
+			if (n1 > 0)
+				overZeroCount = overZeroCount + 1;
+
+			if (n1 == 0)
+				zeroCount = zeroCount + 1;
+
+			if (n2 < 0)
+				underZeroCount = underZeroCount + 1;
+
+			if (n2 > 0)
+				overZeroCount = overZeroCount + 1;
+
+			if (n2 == 0)
+				zeroCount = zeroCount + 1;
+
+			if (n3 < 0)
+				underZeroCount = underZeroCount + 1;
+
+			if (n3 > 0)
+				overZeroCount = overZeroCount + 1;
+
+			if (n3 == 0)
+				zeroCount = zeroCount + 1;
+
+			if (n4 < 0)
+				underZeroCount = underZeroCount + 1;
+
+			if (n4 > 0)
+				overZeroCount = overZeroCount + 1;
+
+			if (n4 == 0)
+				zeroCount = zeroCount + 1;
+
+			if (n5 < 0)
+				underZeroCount = underZeroCount + 1;
+
+			if (n5 > 0)
+				overZeroCount = overZeroCount + 1;
+
+			if (n5 == 0)
+				zeroCount = zeroCount + 1;
+
+
+			document.getElementById("result").value = (
+				"\nThere were " + underZeroCount + " Negative Numbers" +
+				"\nThere were " + overZeroCount + " Positive Numbers" +
+				"\nThere were " + zeroCount + " Numbers equal to zero");
+
+		}
+	</script>	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#fadme").click(function(){
+    $("#result").fadeTo("slow", 0.10);
+   
+  });
+});
+</script>
+</head>
+<body>
+	<div class ="box">
+		<nav>
+  <a href="cnit133-hw2.html">Home</a> |
+  <a href="part1.html"> Part 1</a> |
+  <a href="part2.html">Part 2</a> |
+  <a href="#">Part 3</a> | 
+  <a href="part4.html">Part 4</a> 
+ 
+</nav>
+	<h2 align="center"> PART 3 </h2>
+	<p align="center">Using HTML form and JS IFstatments </p>
+		<div align="center">
+<form id="myform" name="myform">
+		<table>
+			<p style="align-self: center" >Enter 5 intgers </p>
+<tr>  
+<td width="93" >Fisrt Number:</td>
+<td width="157"> <input type="number" id ="num1" autofocus></td>
+			</tr>
+			<tr>  
+<td>Second Number:</td>
+<td> <input type="number" id ="num2" ></td>
+			</tr>
+			<tr>  
+	<td>Third Number:</td>
+		<td> <input type="number" id ="num3" ></td>
+			</tr>
+				<tr>  
+	<td>Fourth Number:</td>
+		<td> <input type="number" id ="num4" ></td>
+			</tr>
+				<tr>  
+	<td>Fifth Number:</td>
+		<td> <input type="number" id ="num5" ></td>
+			</tr>
+	</table> 
+<br><p>the number of negative ,positive ,and zeros counts of 
+	the 5  enterd numbers will appear in this textarea when you click submit buttuon </p><input type="button" onclick="process()" value="SUBMIT"><br>
+	<br>
+Results: <textarea type="text" rows="6" cols="60" id="result" readonly style="background-color:skyblue;align: center"></textarea><br> <br>
+
+
+			 <input type="button" id="fadme" class="fadme" value="Fade Results" style="align: center"> <input type="reset" value="RESET" onclick="document.getElementById('num1').focus();"><br><br>
+		</form>
+	</div>
+		<p>
+		<script type="text/javascript">
+var LastUpdated = document.lastModified;
+document.writeln ("Last modified: " + LastUpdated);
+</script>
+</p>
+
+<p><a href="https://validator.w3.org/check?uri=referer">
+<img style="border:0;width:100px;height:59px" src="html5logo.jpg"
+alt="HTML5"></a>
+
+<a href="https://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+		 alt="Valid CSS!"></a></p>
+		</div>
+</body>
+</html>
